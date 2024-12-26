@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábrica da Alegria</title>
+    <link rel="icon" href="logo/favicon.ico" type="image/x-icon">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff9915;
+            color: rgb(255, 255, 255);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            width: 100px; /* Ajuste o tamanho da imagem */
+            height: 100px;
+            margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .produto {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .produto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .produto h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .produto p {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #777;
+        }
+
+        .produto .preco {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #FF5733;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        .contato-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .contato-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .contato-form input, .contato-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .contato-form button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .contato-form button:hover {
+            background-color: #e14d2a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <img src="logo.jpeg" alt="Logo da empresa">
+        <h1>Fábrica da Alegria - Salgados e Doces</h1>
+        <p>Servir bem para servir sempre!</p>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Sobre nós</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <!-- Produtos -->
+        <section class="produtos">
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Salgado 1">
+                <h3>Coxinha de Frango</h3>
+                <p>Deliciosa coxinha com frango bem temperado.</p>
+                <div class="preco">R$ 5,00</div>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Salgado 2">
+                <h3>Esfirra de Carne</h3>
+                <p>Esfirra assada com carne suculenta e tempero especial.</p>
+                <div class="preco">R$ 4,00</div>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/300x200" alt="Doce 1">
+                <h3>Pudim de Leite</h3>
+                <p>Pudim cremoso e com calda deliciosa.</p>
+                <div class="preco">R$ 8,00</div>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section class="contato-form">
+            <h2>Entre em Contato</h2>
+            <form action="#">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="number">Telefone WhatsApp:</label>
+                <input type="number" id="number" name="number" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Salgados e Doces Delícias | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
